@@ -12,28 +12,7 @@ class Todo extends Component {
     input: "",
     details: "",
     showEdit: false,
-    list: [
-      {
-        title: "Do laudry",
-        details: "Take all the shirts and pants and wash them",
-        show: false
-      },
-      {
-        title: "Do Homework",
-        details: "Finish this app, then finish other assignments",
-        show: false
-      },
-      {
-        title: "Clean Room",
-        details: "Finish this app, then finish other assignments",
-        show: false
-      },
-      {
-        title: "Mow the Lawn",
-        details: "Finish this app, then finish other assignments",
-        show: false
-      }
-    ]
+    list: []
   };
 
   inputHandle = e => {
@@ -111,13 +90,17 @@ class Todo extends Component {
               </Button>
               </div> 
             </form>
-            
-            <List
-              list={this.state.list}
-              deleteItem={this.deleteItem}
-              showItem={this.showItem}
-              edit={this.edit}
+            {
+              this.state.list.length == 0 ?
+              <h3 className="text">Add some tasks toDo</h3> :
+              <List
+                list={this.state.list}
+                deleteItem={this.deleteItem}
+                showItem={this.showItem}
+                edit={this.edit}
             />
+            }
+
             
           </div>
         </div>
