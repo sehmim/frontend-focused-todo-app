@@ -4,7 +4,6 @@ import "../App.css";
 
 import { Button } from "reactstrap";
 import TextField from "@material-ui/core/TextField";
-import DragSortableList from 'react-drag-sortable'
 
 
 class Todo extends Component {
@@ -52,10 +51,6 @@ class Todo extends Component {
     this.setState({
       list: newArray
     });
-  };
-
-  edit = index => {
-
   };
 
   render() {

@@ -3,10 +3,10 @@ import Button from '@material-ui/core/Button';
 
 class List extends Component {
 
-state= {
-    showDetails : false,
-    edit : false
-}
+// state= {
+//     showDetails : false,
+//     edit : false
+// }
 
 list = () => {
     this.props.list
